@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import './App.css'
 
+
 // Your Supabase credentials
 const supabaseUrl = 'https://qedrvgccmqovzndkzwqg.supabase.co'
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlZHJ2Z2NjbXFvdnpuZGt6d3FnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgzNjgwNDYsImV4cCI6MjA5Mzk0NDA0Nn0.2DyS2KF7AK8GG4_k69RQ7JYHrxLhtCkKTGTmgYDa6rs'
@@ -99,7 +100,7 @@ function App() {
           <div className="avatar">
             <div className="avatar-circle">
               <img 
-                src="\public\profile.jpg"
+                src="\profile.jpg"
                 alt="Edrael Angcon"
                 className="profile-img"
               />
@@ -224,11 +225,11 @@ function App() {
             <div className="achievements-grid">
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: '100% Client Satisfaction',
-                imageUrl: '/public/3cert.png'
+                imageUrl: '/3cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
-                    src="/public/3cert.png" 
+                    src="/3cert.png" 
                     alt="React Certified - Meta Frontend Professional Certificate"
                     className="certificate-img"
                   />
@@ -242,11 +243,11 @@ function App() {
               
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: '100% Client Satisfaction',
-                imageUrl: '/public/5cert.png'
+                imageUrl: '/5cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
-                    src="/public/5cert.png" 
+                    src="/5cert.png" 
                     alt="100% Client Satisfaction - Across 15+ Projects"
                     className="certificate-img"
                   />
@@ -261,11 +262,11 @@ function App() {
               
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: '100% Client Satisfaction',
-                imageUrl: '/public/2cert.png'
+                imageUrl: '/2cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
-                    src="/public/2cert.png" 
+                    src="/2cert.png" 
                     alt="100% Client Satisfaction - Across 15+ Projects"
                     className="certificate-img"
                   />
@@ -280,11 +281,11 @@ function App() {
               
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: '100% Client Satisfaction',
-                imageUrl: '/public/1cert.png'
+                imageUrl: '/1cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
-                    src="/public/1cert.png" 
+                    src="/1cert.png" 
                     alt="100% Client Satisfaction - Across 15+ Projects"
                     className="certificate-img"
                   />
