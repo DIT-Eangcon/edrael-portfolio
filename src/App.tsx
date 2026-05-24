@@ -145,13 +145,13 @@ function App() {
               </p>
               <div className="personal-details">
                 <div className="detail-item">
-                  <strong>🎂 Birthday:</strong> January 15, 2000
+                  <strong>🎂 Birthday:</strong> September 18, 2003
                 </div>
                 <div className="detail-item">
-                  <strong>📱 Phone:</strong> +63 912 345 6789
+                  <strong>📱 Phone:</strong> +63 975 464 4786
                 </div>
                 <div className="detail-item">
-                  <strong>🎓 Education:</strong> BS Information Technology
+                  <strong>🎓 Education:</strong> Diploma in  Information Technology
                 </div>
                 <div className="detail-item">
                   <strong>🌐 Languages:</strong> English, Filipino, Cebuano
@@ -166,10 +166,6 @@ function App() {
               <div className="stat-card">
                 <div className="stat-number">20+</div>
                 <div className="stat-label">Projects Completed</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">Happy Clients</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">∞</div>
@@ -440,7 +436,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>© 2024 Edrael Q. Angcon. All rights reserved.</p>
+        <p>© 2026 Edrael Q. Angcon. All rights reserved.</p>
       </footer>
 
       {/* Modal for Certificate Viewing */}
