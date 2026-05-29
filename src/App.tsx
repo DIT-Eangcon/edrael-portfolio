@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import './App.css'
 
+=======
+import { useState } from 'react'
+import { createClient } from '@supabase/supabase-js'
+import './App.css'
+
+
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
 // Your Supabase credentials
 const supabaseUrl = 'https://qedrvgccmqovzndkzwqg.supabase.co'
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlZHJ2Z2NjbXFvdnpuZGt6d3FnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgzNjgwNDYsImV4cCI6MjA5Mzk0NDA0Nn0.2DyS2KF7AK8GG4_k69RQ7JYHrxLhtCkKTGTmgYDa6rs'
@@ -18,6 +26,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [selectedCertificate, setSelectedCertificate] = useState<any>(null)
+<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
@@ -54,6 +63,8 @@ function App() {
       document.body.style.overflow = 'unset'
     }
   }, [mobileMenuOpen])
+=======
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -72,6 +83,10 @@ function App() {
     try {
       console.log('Sending data to Supabase...')
       
+<<<<<<< HEAD
+=======
+      // Insert into contacts table
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
       const { data, error } = await supabase
         .from('contacts')
         .insert([
@@ -86,8 +101,14 @@ function App() {
       if (error) {
         console.error('Supabase error:', error)
         
+<<<<<<< HEAD
         if (error.code === '42501') {
           throw new Error('Permission denied. Please enable RLS policies for the contacts table')
+=======
+        // Specific error messages
+        if (error.code === '42501') {
+          throw new Error('Permission denied. Please run: ALTER TABLE contacts DISABLE ROW LEVEL SECURITY; in Supabase SQL editor')
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
         } else if (error.code === '42P01') {
           throw new Error('Table not found. Please create the contacts table in Supabase')
         } else {
@@ -111,6 +132,7 @@ function App() {
     setSelectedCertificate(certificate)
   }
 
+<<<<<<< HEAD
   const closeMobileMenu = () => {
     setMobileMenuOpen(false)
   }
@@ -147,22 +169,46 @@ function App() {
             <li><button onClick={() => handleNavClick('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</button></li>
             <li><button onClick={() => handleNavClick('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</button></li>
             <li><button onClick={() => handleNavClick('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</button></li>
+=======
+  return (
+    <div className="portfolio">
+      {/* Navigation */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="logo">EA</div>
+          <ul className="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
           </ul>
         </div>
       </nav>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section id="home" className="hero">
+=======
+      <section id="home" className="hero fullscreen">
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
         <div className="hero-content">
           <div className="avatar">
             <div className="avatar-circle">
               <img 
+<<<<<<< HEAD
                 src="/profile.jpg"
                 alt="Edrael Angcon"
                 className="profile-img"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=EA'
                 }}
+=======
+                src="\profile.jpg"
+                alt="Edrael Angcon"
+                className="profile-img"
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
               />
             </div>
           </div>
@@ -178,7 +224,11 @@ function App() {
             <span>Vite</span>
             <span>Node.js</span>
           </div>
+<<<<<<< HEAD
           <button onClick={() => handleNavClick('contact')} className="cta-button">Get in touch →</button>
+=======
+          <a href="#contact" className="cta-button">Get in touch →</a>
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
         </div>
         <div className="scroll-indicator">
           <span>Scroll</span>
@@ -211,7 +261,11 @@ function App() {
                   <strong>📱 Phone:</strong> +63 975 464 4786
                 </div>
                 <div className="detail-item">
+<<<<<<< HEAD
                   <strong>🎓 Education:</strong> Diploma in Information Technology
+=======
+                  <strong>🎓 Education:</strong> Diploma in  Information Technology
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                 </div>
                 <div className="detail-item">
                   <strong>🌐 Languages:</strong> English, Filipino, Cebuano
@@ -236,6 +290,7 @@ function App() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Skills Section - Multiple Categories */}
       <section id="skills" className="skills">
         <div className="container">
@@ -386,6 +441,8 @@ function App() {
         </div>
       </section>
 
+=======
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
       {/* Experience Section */}
       <section id="experience" className="experience">
         <div className="container">
@@ -430,83 +487,138 @@ function App() {
             <h3>Achievements & Certifications</h3>
             <div className="achievements-grid">
               <div className="achievement-card" onClick={() => handleCertificateClick({
+<<<<<<< HEAD
                 title: 'Setting Up Computer Servers',
+=======
+                title: '100% Client Satisfaction',
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                 imageUrl: '/3cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
                     src="/3cert.png" 
+<<<<<<< HEAD
                     alt="Setting Up Computer Servers Certificate"
                     className="certificate-img"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x200?text=Certificate'
                     }}
+=======
+                    alt="React Certified - Meta Frontend Professional Certificate"
+                    className="certificate-img"
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   />
                   <div className="certificate-overlay">
                     <span>🔍 View Certificate</span>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <h4>Setting Up Computer Servers</h4>
               </div>
               
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: 'Responsive Web Design',
+=======
+                <h4>Settings Up Computer Servers</h4>
+              
+              </div>
+              
+              <div className="achievement-card" onClick={() => handleCertificateClick({
+                title: '100% Client Satisfaction',
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                 imageUrl: '/5cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
                     src="/5cert.png" 
+<<<<<<< HEAD
                     alt="Responsive Web Design Certificate"
                     className="certificate-img"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x200?text=Certificate'
                     }}
+=======
+                    alt="100% Client Satisfaction - Across 15+ Projects"
+                    className="certificate-img"
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   />
                   <div className="certificate-overlay">
                     <span>🔍 View Certificate</span>
                   </div>
                 </div>
                 <h4>Responsive Web Design</h4>
+<<<<<<< HEAD
               </div>
 
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: 'Installing and Configuring Computer Systems',
+=======
+              
+              </div>
+
+              
+              <div className="achievement-card" onClick={() => handleCertificateClick({
+                title: '100% Client Satisfaction',
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                 imageUrl: '/2cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
                     src="/2cert.png" 
+<<<<<<< HEAD
                     alt="Installing and Configuring Computer Systems Certificate"
                     className="certificate-img"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x200?text=Certificate'
                     }}
+=======
+                    alt="100% Client Satisfaction - Across 15+ Projects"
+                    className="certificate-img"
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   />
                   <div className="certificate-overlay">
                     <span>🔍 View Certificate</span>
                   </div>
                 </div>
                 <h4>Installing and Configuring Computer Systems</h4>
+<<<<<<< HEAD
               </div>
 
               <div className="achievement-card" onClick={() => handleCertificateClick({
                 title: 'Maintaining Computer Systems and Networks',
+=======
+               
+              </div>
+
+              
+              <div className="achievement-card" onClick={() => handleCertificateClick({
+                title: '100% Client Satisfaction',
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                 imageUrl: '/1cert.png'
               })}>
                 <div className="certificate-image-container">
                   <img 
                     src="/1cert.png" 
+<<<<<<< HEAD
                     alt="Maintaining Computer Systems and Networks Certificate"
                     className="certificate-img"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x200?text=Certificate'
                     }}
+=======
+                    alt="100% Client Satisfaction - Across 15+ Projects"
+                    className="certificate-img"
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   />
                   <div className="certificate-overlay">
                     <span>🔍 View Certificate</span>
                   </div>
                 </div>
                 <h4>Maintaining Computer Systems and Networks</h4>
+<<<<<<< HEAD
+=======
+                <p>Across 15+ Projects</p>
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
               </div>
             </div>
           </div>
@@ -521,11 +633,19 @@ function App() {
             <div className="project-card">
               <div className="project-icon">🎨</div>
               <h3>Design System</h3>
+<<<<<<< HEAD
               <p>Campus Visitor Tracking System </p>
               <div className="project-tags">
                 <span>Php</span>
                 <span>Html</span>
                 <span>campus security</span>
+=======
+              <p>Component library built with React and Tailwind CSS</p>
+              <div className="project-tags">
+                <span>React</span>
+                <span>Tailwind</span>
+                <span>Storybook</span>
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
               </div>
             </div>
             <div className="project-card">
@@ -540,12 +660,21 @@ function App() {
             </div>
             <div className="project-card">
               <div className="project-icon">🛒</div>
+<<<<<<< HEAD
               <h3>Portfolio</h3>
               <p>Full-stack shopping experience with modern stack</p>
               <div className="project-tags">
                 <span>React</span>
                 <span>Supabase</span>
                 <span>Tsx</span>
+=======
+              <h3>E-commerce Platform</h3>
+              <p>Full-stack shopping experience with modern stack</p>
+              <div className="project-tags">
+                <span>Next.js</span>
+                <span>PostgreSQL</span>
+                <span>Stripe</span>
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
               </div>
             </div>
           </div>
@@ -575,17 +704,29 @@ function App() {
                 </div>
               </div>
               <div className="social-links">
+<<<<<<< HEAD
                 <a href="https://github.com/DIT-Eangcon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+=======
+                <a href="https://github.com/DIT-Eangcon" target="_blank" rel="noopener noreferrer">
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   <svg viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.58 0-.287-.01-1.05-.015-2.06-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.698.83.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
                   </svg>
                 </a>
+<<<<<<< HEAD
                 <a href="https://www.facebook.com/edrael.angcon.73" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+=======
+                <a href="https://www.facebook.com/edrael.angcon.73" target="_blank" rel="noopener noreferrer">
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   <svg viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
+<<<<<<< HEAD
                 <a href="https://instagram.com/edraelangcon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+=======
+                <a href="https://instagram.com/edraelangcon" target="_blank" rel="noopener noreferrer">
+>>>>>>> 6238cefcb615bf333e8e37f6ad24d33a402df1da
                   <svg viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                   </svg>
